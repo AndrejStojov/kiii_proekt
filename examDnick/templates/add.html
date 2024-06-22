@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="mt-5 container ">
+        <div class="row justify-content-center">
+
+            <div class="col-6 shadow p-3 mb-5 bg-body rounded">
+                <form method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ form }}
+                    <input class="btn btn-success mt-5 rounded-pill" type="submit" value="submit" >
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

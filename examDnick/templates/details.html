@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="container">
+    <div class="row">
+        <div class="col">
+            <img style="width: 500px" src="{{ exam.image.url }} ">
+        </div>
+        <div class="col">
+            <h1>{{ exam.name }}</h1>
+            <h1>{{ exam.date }}</h1>
+            <h1>Profesors:</h1>
+            <ul class="list-group">
+                {% for profesor in profesors %}
+                	<li class="list-group-item"> {{ profesor.profesor.name }}</li>
+                {% endfor %}
+
+            </ul>
+        </div>
+    </div>
+
+    </div>
+{% endblock %}

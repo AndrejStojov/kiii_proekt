@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="container">
+    <form method="post">
+    {% csrf_token %}
+    <h1>Are you sure you want to delete "{{ exam.name }}"</h1>
+    
+    <input class="btn btn-danger" type="submit" value="submit" >
+    </form>
+    </div>
+    
+    
+{% endblock %}
