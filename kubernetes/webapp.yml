@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: web
+  template:
+    metadata:
+      labels:
+        app: web
+    spec:
+      containers:
+      - name: web
+        image: andrejstojov/examdnick:latest
+        ports:
+        - containerPort: 8000
+        env:
+        - name: SQL_NAME
+          valueFrom:
+            configMapKeyRef:
+              name: app-config
+              key: SQL_NAME
+        - name: SQL_USER
+          valueFrom:
+            configMapKeyRef:
+              name: app-config
+              key: SQL_USER
+        - name: SQL_PASSWORD
+          valueFrom:
+            configMapKeyRef:
+              name: app-config
+              key: SQL_PASSWORD
+        volumeMounts:
+        - name: app-volume
+          mountPath: /app
+      volumes:
+      - name: app-volume
+        emptyDir: {}
