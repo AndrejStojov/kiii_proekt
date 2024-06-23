@@ -30,7 +30,7 @@ jobs:
       with:
         context: ./examDnick
         push: true
-        tags: ${{ secrets.DOCKER_USERNAME }}/examDnick:latest
+        tags: ${{ secrets.DOCKER_USERNAME }}/examdnick:latest
 
     - name: Logout from DockerHub
       run: docker logout
