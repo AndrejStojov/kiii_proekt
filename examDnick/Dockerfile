@@ -13,5 +13,4 @@ COPY . /app/
 
 RUN chmod +x /app/start.sh
 
-# Run the entrypoint script
 ENTRYPOINT ["/app/start.sh"]
