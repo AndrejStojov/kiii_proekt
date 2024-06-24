@@ -26,7 +26,8 @@ SECRET_KEY = 'django-insecure-302nx$klcp4+r@6u9=06i5=e@cxxfm=u+-f78xn%6op65yzaet
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'exams.local.com'
+    'exams.local.com',
+    'localhost'
 ]
 
 
