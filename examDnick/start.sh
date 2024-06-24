@@ -1,4 +1,7 @@
 #!/bin/sh
+echo "Collect static files"
+python manage.py collectstatic --noinput
+echo "Make migrations"
 python manage.py makemigrations --no-input
 python manage.py migrate --no-input
 echo "Create superuser"

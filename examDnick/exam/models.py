@@ -17,7 +17,7 @@ class Exam(models.Model):
         ("S", "Sumer"),
     ]
     name = models.CharField(max_length=50)
-    date = models.DateField()
+    date = models.DateTimeField()
     semester = models.CharField(max_length=3, choices=SEMESTER_CHOICES, null=True, blank=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     profesors = models.CharField(max_length=100, blank=True, null=True)
