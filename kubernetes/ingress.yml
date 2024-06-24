@@ -6,7 +6,7 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-  - host: web.local
+  - host: exams.local.com
     http:
       paths:
       - path: /
