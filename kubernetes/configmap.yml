@@ -3,6 +3,6 @@ kind: ConfigMap
 metadata:
   name: app-config
 data:
-  SQL_NAME: mydb
-  SQL_USER: myuser
-  SQL_PASSWORD: mypassword
+  SQL_NAME: exams_db
+  SQL_USER: postgres
+  SQL_PASSWORD: postgres

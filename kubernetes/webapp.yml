@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: web
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: web
@@ -33,9 +33,3 @@ spec:
             configMapKeyRef:
               name: app-config
               key: SQL_PASSWORD
-        volumeMounts:
-        - name: app-volume
-          mountPath: /app
-      volumes:
-      - name: app-volume
-        emptyDir: {}
